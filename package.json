@@ -1,0 +1,22 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:js": "babel src/index.js --watch --out-file lib/index.js",
+    "dev": "nodemon lib/index.js",
+    "start": "npm-run-all -p compile:js dev",
+    "build": "babel src -d lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
